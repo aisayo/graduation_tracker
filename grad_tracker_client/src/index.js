@@ -6,9 +6,12 @@ import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { BrowserRouter as Router } from 'react-router-dom'
 
+import App from './components/App'
+import { rootReducer } from './reducers/rootReducer'
+
 const store = createStore(
     rootReducer, 
-    composeWithDevTools(applyMiddleware(thunk))
+    composeWithDevTools(rootReducer, applyMiddleware(thunk))
     )
 
 ReactDOM.render(
