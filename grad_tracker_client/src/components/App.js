@@ -1,9 +1,13 @@
 import React from 'react';
 
+import Router from './Router'
+import GradsContainer from './GradsContainer'
+
 const App = () => {
     return (
         <div>
-            Hello World
+            <GradsContainer />
+            <Router />
         </div>
     );
 };
