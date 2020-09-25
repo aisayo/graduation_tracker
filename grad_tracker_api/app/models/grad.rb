@@ -1,0 +1,2 @@
+class Grad < ApplicationRecord
+end
