@@ -1,6 +1,6 @@
 export const gradsReducer = (state = [], action) => {
     switch(action.type){
-        case 'FETCH_STUDENTS':
+        case 'FETCH_GRADS':
             return action.payload
         default:
             return state
