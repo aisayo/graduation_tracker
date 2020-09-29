@@ -21,12 +21,12 @@ class GradsForm extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        this.props.addGrad(state)
+        this.props.addGrad(this.state)
     }
 
     render() {
         return (
-            <form onSubmit={this.handSubmit}>
+            <form onSubmit={this.handleSubmit}>
                 <label>Name</label>
                 <input type='text' value={this.state.name} onChange={this.handleChange} name='name'/>
                 <br/>

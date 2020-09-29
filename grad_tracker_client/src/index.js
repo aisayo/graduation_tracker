@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
@@ -9,12 +9,14 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import App from './components/App'
 import { rootReducer } from './reducers/rootReducer'
 
+
+//only pass reducer in once to createStore
 const store = createStore(
     rootReducer, 
-    composeWithDevTools(rootReducer, applyMiddleware(thunk))
+    composeWithDevTools(applyMiddleware(thunk))
     )
 
-ReactDOM.render(
+render(
     <Provider store={store}>
         <Router>
             <App />

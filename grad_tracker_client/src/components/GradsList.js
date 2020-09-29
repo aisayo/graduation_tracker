@@ -4,13 +4,14 @@ import { connect } from 'react-redux'
 const GradsList = ({ grads }) => {
     return (
         <div>
-            {grads.map(grad => {
-                <ul>
-                    <li key={grad.id}>
+            <h1>Grads List:</h1>
+            {grads.map(grad => 
+                <ul key={grad.id}>
+                    <li >
                         {grad.name} - {grad.degree} - {grad.grad_date} - {grad.school}
                     </li>
                 </ul>
-            })}
+        )}
         </div>
     );
 };
